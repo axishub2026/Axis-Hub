@@ -8,8 +8,10 @@
 <meta property="og:title" content="Axis Hub — Tu base operativa en el Bajío">
 <meta property="og:description" content="Espacios híbridos: bodega + oficina dentro de Axis Logistics Park. Corredor León–Silao.">
 <meta property="og:type" content="website">
-<link rel="preconnect"
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+CjxyZWN0IHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgcng9IjYiIGZpbGw9IiMxYTFhMWEiLz4KPHRleHQgeD0iMTYiIHk9IjIyIiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjgwMCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2M0NzUyYyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QUg8L3RleHQ+Cjwvc3ZnPgo=">
+<meta property="og:image" content="https://axishub.com.mx/img/hero-fachada.jpeg">
+<meta property="og:url" content="https://axishub.com.mx">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="icon" type="image/png" href="img/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <!-- Google Analytics 4 -->
@@ -216,6 +218,19 @@ button { font-family: var(--font); cursor: pointer; }
   background: var(--black);
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+
+.nav__logo-img {
+  height: 36px;
+  width: auto;
+}
+
+.footer__logo {
+  height: 28px;
+  width: auto;
+  opacity: 0.5;
+  margin-bottom: 4px;
 }
 
 /* ════════════════════════════════════════
@@ -1345,7 +1360,7 @@ button { font-family: var(--font); cursor: pointer; }
   <div class="container">
     <div class="nav__inner">
       <a href="#" class="nav__brand">
-        <div class="nav__logo">AXIS<span>HUB</span></div>
+        <img src="img/logo.png" alt="Axis Hub" class="nav__logo-img">
         <div class="nav__parent">by Axis Logistics Park</div>
       </a>
       <a href="#contacto" class="nav__cta" onclick="gtag('event','click_nav_cta')">
@@ -1822,10 +1837,13 @@ button { font-family: var(--font); cursor: pointer; }
 <footer class="footer">
   <div class="container">
     <div class="footer__inner">
-      <div>© 2026 Axis Hub — by Axis Logistics Park · León, Gto.</div>
+      <div>
+          <img src="img/logo.png" alt="Axis Hub" class="footer__logo">
+          <span>© 2026 Axis Hub — by Axis Logistics Park · León, Gto.</span>
+        </div>
       <div class="footer__links">
         <a href="#">Aviso de privacidad</a>
-        <a href="mailto:info@axishub.com.mx">info@axishub.com.mx</a>
+        <a href="/cdn-cgi/l/email-protection#3851565e57785940514b504d5a165b5755165540"><span class="__cf_email__" data-cfemail="89e0e7efe6c9e8f1e0fae1fceba7eae6e4a7e4f1">[email&#160;protected]</span></a>
       </div>
     </div>
   </div>
@@ -1962,15 +1980,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 // ── CTA click tracking ──
-document.querySelectorAll('.btn-amber, .btn-whatsapp, .nav__cta').forEach(btn => {
-  btn.addEventListener('click', () => {
-    gtag('event', 'cta_click', {
-      event_label: btn.textContent.trim().slice(0, 30),
-      event_category: 'engagement'
-    });
-  });
-});
-</script>
-
-</body>
-</html>
+document.querySelectorAll('.btn-amber, .btn-whats
