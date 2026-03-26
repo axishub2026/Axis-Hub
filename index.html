@@ -614,6 +614,55 @@ button { font-family: var(--font); cursor: pointer; }
 }
 
 /* ════════════════════════════════════════
+   §5.5 — MODELS
+   ════════════════════════════════════════ */
+.models {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.models__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.models__header .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.models__block {
+  margin-bottom: 48px;
+}
+
+.models__subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.models__desc {
+  font-size: 0.95rem;
+  color: var(--steel);
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.models__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.models__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ════════════════════════════════════════
    §6 — USE CASES
    ════════════════════════════════════════ */
 .usecases {
@@ -1517,6 +1566,42 @@ button { font-family: var(--font); cursor: pointer; }
         <div class="included__card-title">Facturación y contrato claro</div>
         <div class="included__card-text">CFDI, contrato transparente, sin letras chicas, sin compromisos excesivos.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- §5.5 — MODELOS DISPONIBLES -->
+<section class="models reveal" id="modelos">
+  <div class="container">
+    <div class="models__header">
+      <div class="section-eyebrow">Modelos disponibles</div>
+      <h2 class="section-title">Elige el espacio que tu operación necesita</h2>
+      <p class="section-sub">
+        Desde almacenamiento compacto hasta ofibodegas con oficina integrada. Todos dentro de Axis Logistics Park.
+      </p>
+    </div>
+
+    <div class="models__block reveal">
+      <h3 class="models__subtitle">Mini Bodegas</h3>
+      <p class="models__desc">Espacios de almacenamiento con la misma altura, en tres tamaños según tu operación.</p>
+      <div class="models__image">
+        <img src="img/minibodegas.png" alt="Modelos de mini bodegas Axis Hub — 12m², 24m² y 40m²" loading="lazy">
+      </div>
+    </div>
+
+    <div class="models__block reveal">
+      <h3 class="models__subtitle">Ofibodegas</h3>
+      <p class="models__desc">Bodega + oficina en un mismo espacio. Disponible en formato single level o doble altura con mezzanine.</p>
+      <div class="models__image">
+        <img src="img/ofibodegas.png" alt="Modelos de ofibodegas Axis Hub — Single level y doble altura con mezzanine" loading="lazy">
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:40px;">
+      <a href="#contacto" class="btn-amber" onclick="gtag('event','click_models_cta')">
+        Solicitar cotización de mi modelo →
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 </section>
