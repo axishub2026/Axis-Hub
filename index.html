@@ -1954,4 +1954,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 // ── CTA click tracking ──
-document.querySelectorAll('.btn-amber, .btn-whats
+document.querySelectorAll('.btn-amber, .btn-whatsapp, .nav__cta').forEach(btn => {
+  btn.addEventListener('click', () => {
+    gtag('event', 'cta_click', {
+      event_label: btn.textContent.trim().slice(0, 30),
+      event_category: 'engagement'
+    });
+  });
+});
+</script>
+
+</body>
+</html>
