@@ -177,13 +177,23 @@ button { font-family: var(--font); cursor: pointer; }
 .nav__brand {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 10px;
+}
+
+.nav__brand-icon {
+  height: 32px;
+  width: auto;
+}
+
+.nav__brand-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav__logo {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.06em;
   color: var(--black);
   line-height: 1;
 }
@@ -193,11 +203,12 @@ button { font-family: var(--font); cursor: pointer; }
 }
 
 .nav__parent {
-  font-size: 0.62rem;
+  font-size: 0.58rem;
   font-weight: 500;
   color: var(--ash);
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  margin-top: 3px;
   margin-top: 2px;
 }
 
@@ -1397,7 +1408,11 @@ button { font-family: var(--font); cursor: pointer; }
   <div class="container">
     <div class="nav__inner">
       <a href="#" class="nav__brand">
-        <img src="img/logo.png" alt="Axis Hub" style="height:40px;width:auto;object-fit:contain;">
+        <img src="img/isotipo.png" alt="" class="nav__brand-icon">
+        <div class="nav__brand-text">
+          <div class="nav__logo">AXIS <span>HUB</span></div>
+          <div class="nav__parent">by Axis Logistics Park</div>
+        </div>
       </a>
       <a href="#contacto" class="nav__cta" onclick="gtag('event','click_nav_cta')">
         Solicitar información →
@@ -1901,7 +1916,7 @@ button { font-family: var(--font); cursor: pointer; }
       <div>© 2026 Axis Hub — by Axis Logistics Park · León, Gto.</div>
       <div class="footer__links">
         <a href="#">Aviso de privacidad</a>
-        <a href="mailto:info@axishub.com.mx">info@axishub.com.mx</a>
+        <a href="/cdn-cgi/l/email-protection#6d04030b022d0c15041e05180f430e0200430015"><span class="__cf_email__" data-cfemail="bbd2d5ddd4fbdac3d2c8d3ced995d8d4d695d6c3">[email&#160;protected]</span></a>
       </div>
     </div>
   </div>
@@ -1917,7 +1932,7 @@ button { font-family: var(--font); cursor: pointer; }
 <!-- ════════════════════════════════════════
      SCRIPTS
      ════════════════════════════════════════ -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // ── Scroll reveal ──
 const revealEls = document.querySelectorAll('.reveal');
 const revealObs = new IntersectionObserver((entries) => {
